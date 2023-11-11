@@ -28,6 +28,42 @@
 11.- Creaar un nuevo archivo para el definir el controlado 
     # app/Controllers/Nombre_del_controlador.php
 12.- Crear una vista app/Views/templates/header.php
+13.- Crear en phpmyadmin la base de datos
+14.- crear la tabla 
+    CREATE TABLE news (
+        id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+        title VARCHAR(128) NOT NULL,
+        slug VARCHAR(128) NOT NULL,
+        body TEXT NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE slug (slug)
+    );
+15.- ingresamos información de trabajo
+    INSERT INTO news VALUES
+    (1,'Elvis sighted','elvis-sighted','Elvis was sighted at the Podunk internet cafe. It looked like he was writing a CodeIgniter app.'),
+    (2,'Say it isn\'t so!','say-it-isnt-so','Scientists conclude that some programmers have a sense of humor.'),
+    (3,'Caffeination, Yes!','caffeination-yes','World\'s largest coffee shop open onsite nested coffee shop for staff only.');
+16.- realizar la configuración de la base de datos en el archivo .env
+    database.default.hostname = localhost
+    database.default.database = nombre de la base de datos
+    database.default.username = usuario
+    database.default.password = contraseña
+    database.default.DBDriver = MySQLi
+17.- crear el modelo, en el directorio app/Models crear el modelo
+    @NewsModel.php
+18.- definición del métodos para el manejo de la interacción con la base de datos
+    public function getNews($slug = false)
+19.- creamos la ruta que accedera a las noticias en el archivo de las rutas
+        @use App\Controllers\News; // Add this line
+        @$routes->get('news', [News::class, 'index']);           // Add this line
+        @$routes->get('news/(:segment)', [News::class, 'show']); // Add this line
+20.- creación del controlador News
+        @app/Controllers/News.php
+21.- creacion de lavista para desplegar la informacion del controlador News, en la ruta
+    @app/Views/news/index.php
+
+
+
 
 
     
