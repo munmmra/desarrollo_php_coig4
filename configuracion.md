@@ -61,6 +61,15 @@
         @app/Controllers/News.php
 21.- creacion de lavista para desplegar la informacion del controlador News, en la ruta
     @app/Views/news/index.php
+22.- crear la vista para mostrar la informacion del controlador News en la ruta vew
+    @app/Views/news/view.php
+23.- activar el CSRF en el archivo app/Config/Filters.php
+24.- agregar las rutas al archivo app/Config/Routes.php para la creación de nuevas noticias
+25.- crear la vista para el formulario de creación de noticias
+    @app/Views/news/create.php
+25.- agregar el método new() en el controlador News
+26.- crear el metodo create() en el controlador News
+
 
 
 
