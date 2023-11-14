@@ -1,4 +1,5 @@
 1.- Se realiza la instalación de XAMPP
+
 2.- descargar CodeIgniter
 3.- extraer los archivos y renombrar la carpeta con el nombre del proyecto
 4.- mover la carpeta al acceso público del servidor (htdocs, en el caso de xampp para Windows)
