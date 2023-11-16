@@ -1,5 +1,4 @@
 1.- Se realiza la instalación de XAMPP
-
 2.- descargar CodeIgniter
 3.- extraer los archivos y renombrar la carpeta con el nombre del proyecto
 4.- mover la carpeta al acceso público del servidor (htdocs, en el caso de xampp para Windows)
@@ -70,6 +69,7 @@
     @app/Views/news/create.php
 25.- agregar el método new() en el controlador News
 26.- crear el metodo create() en el controlador News
+27.- agreglos campos permitidos para modificar en el modelo 
 
 
 
